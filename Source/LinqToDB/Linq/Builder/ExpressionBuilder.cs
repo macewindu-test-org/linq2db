@@ -187,7 +187,7 @@ namespace LinqToDB.Linq.Builder
 
 					if (queryInfo.Statement.SelectQuery != null)
 					{
-						if (!SqlProviderHelper.IsValidQuery(queryInfo.Statement.SelectQuery, null, null, false, DataContext.SqlProviderFlags, out var errorMessage))
+						if (!SqlProviderHelper.IsValidQuery(queryInfo.Statement.SelectQuery, parentQuery: null, fakeJoin: null, columnSubqueryLevel: null, DataContext.SqlProviderFlags, out var errorMessage))
 						{
 							query.ErrorExpression = new SqlErrorExpression(Expression, errorMessage, Expression.Type);
 							return false;
@@ -282,7 +282,7 @@ namespace LinqToDB.Linq.Builder
 
 			if (result.BuildContext != null)
 			{
-#if DEBUG
+#if BUGCHECK
 				if (!buildInfo.IsTest)
 					QueryHelper.DebugCheckNesting(result.BuildContext.GetResultStatement(), buildInfo.IsSubQuery);
 #endif
