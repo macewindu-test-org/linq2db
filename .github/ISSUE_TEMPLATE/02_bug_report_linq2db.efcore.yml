@@ -1,7 +1,7 @@
 name: Linq To DB for Entity Framework Core Bug Report
 description: Linq To DB for Entity Framework Core bug report
 labels: ["status: needs-tests", "area: efcore"]
-type: Bug
+#type: Bug
 body:
   - type: textarea
     id: background
