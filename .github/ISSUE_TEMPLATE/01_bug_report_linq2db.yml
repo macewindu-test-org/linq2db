@@ -1,7 +1,7 @@
 name: Linq To DB Bug Report
 description: Linq To DB bug report
 labels: ["status: needs-tests"]
-type: Bug
+#type: Bug
 body:
   - type: textarea
     id: background
