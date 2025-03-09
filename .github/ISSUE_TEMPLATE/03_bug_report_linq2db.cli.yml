@@ -1,7 +1,7 @@
 name: Linq To DB CLI Bug Report
 description: Linq To DB CLI scaffold tool bug report
 labels: ["status: needs-tests", "area: scaffold"]
-type: Bug
+#type: Bug
 body:
   - type: textarea
     id: background
